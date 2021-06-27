@@ -4,7 +4,13 @@ export const settings = {
   creator: {
     buttonOK: 'OK',
     buttonCancel: 'Cancel',
+    buttonClear: 'Clear',
     defaultText: 'Add new item',
+  },
+  creatorList: {
+    buttonOK: 'OK',
+    buttonCancel: 'Cancel',
+    buttonClear: 'Clear',
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
@@ -13,6 +19,7 @@ export const settings = {
 export const pageContents = {
   title: 'My first React app',
   subtitle: 'A simple to-do app, with lists, columns and cards',
+  button: 'Add a new list',
 };
 
 export const listData = {
@@ -62,6 +69,59 @@ export const listData = {
         {
           key: 1,
           title: 'Skyrim',
+        },
+      ],
+    },
+  ],
+};
+
+export const listSkillData = {
+  title: 'Skills to learn <sup>soon!</sup>',
+  description: 'Useful skills I want to level up!',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  columns: [
+    {
+      key: 0,
+      title: 'Programming',
+      icon: 'book',
+      cards: [
+        {
+          key: 0,
+          title: 'JavaScript',
+        },
+        {
+          key: 1,
+          title: 'React',
+        },
+      ],
+    },
+    {
+      key: 1,
+      title: 'Music Production',
+      icon: 'film',
+      cards: [
+        {
+          key: 0,
+          title: 'Mixing',
+        },
+        {
+          key: 1,
+          title: 'Sound Design',
+        },
+      ],
+    },
+    {
+      key: 2,
+      title: 'Sports',
+      icon: 'gamepad',
+      cards: [
+        {
+          key: 0,
+          title: 'Football',
+        },
+        {
+          key: 1,
+          title: 'Tennis',
         },
       ],
     },

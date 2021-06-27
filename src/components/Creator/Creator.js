@@ -26,7 +26,7 @@ class Creator extends React.Component {
   }
 
   handleOK = () => {
-    if(this.state.value != ''){
+    if (this.state.value != '') {
       this.props.action(this.state.value);
       this.setState({
         value: '',
@@ -36,10 +36,21 @@ class Creator extends React.Component {
   }
 
   handleCancel = () => {
+    window.confirm("Do you really want to cancel?");
     this.setState({
       value: '',
       visibleButtons: false
     });
+  }
+
+  handleClear = () => {
+    if (this.state.value != '') {
+      this.state.value = '';
+      this.setState({
+        value: '',
+        visibleButtons: true
+      });
+    }
   }
 
   render() {
@@ -54,6 +65,7 @@ class Creator extends React.Component {
         <div className={styles.buttons + (this.state.visibleButtons ? ' ' + styles.buttonsShown : '')}>
           <Button onClick={this.handleOK}>OK</Button>
           <Button onClick={this.handleCancel} variant='danger'>cancel</Button>
+          <Button onClick={this.handleClear} variant='clear'>Clear</Button>
         </div>
       </div>
     );
