@@ -5,14 +5,15 @@ import styles from './Hero.scss';
 //import List from '../List/List';
 
 const Hero = props => (
-    <header className={styles.component}>
-        <h2 className={styles.title}>{ReactHtmlParser(props.titleText)}</h2>
-        <img className={styles.image} src={props.imageSrc}></img>
-    </header>
+  <header className={styles.component}>
+    <h2 className={styles.title}>{ReactHtmlParser(props.titleText)}</h2>
+    <img className={styles.image} src={props.imageSrc}></img>
+  </header>
 );
 
 // Deklaracja properties dla funkcji strzalkowej
 Hero.propTypes = {
-    titleText: PropTypes.node.isRequired,
+  titleText: PropTypes.node.isRequired,
+  imageSrc: PropTypes.string,
 };
 export default Hero;
