@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './App.scss';
-import List from '../List/List';
+import List from '../List/ListContainer';
 // import CreatorList from '../CreatorList/CreatorList';
-import { pageContents, listData, listSkillData } from '../../data/dataStore';
+// import { pageContents /*listData*/ } from '../../data/dataStore';
 
 class App extends React.Component {
 
@@ -14,17 +14,20 @@ class App extends React.Component {
   //Deklaracja typów props
   static propTypes = {
     title: PropTypes.node,
+    subtitle: PropTypes.node,
     description: PropTypes.node,
     lists: PropTypes.array,
   }
 
   render() {
+    const {title, subtitle, lists} = this.props;
     return (
       <main className={styles.component}>
-        <h1 className={styles.title}>{pageContents.title}</h1>
-        <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>
-        <List {...listData} />
-        <List {...listSkillData} />
+        <h1 className={styles.title}>{title}</h1>
+        <h2 className={styles.subtitle}>{subtitle}</h2>
+        {lists.map(listData => (
+          <List key={listData.id} {...listData} />
+        ))}
       </main>
     );
   }
