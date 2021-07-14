@@ -1,39 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './App.scss';
-import List from '../List/ListContainer';
-import Search from '../Search/SearchContainer';
-import Container from '../Container/Container';
-// import CreatorList from '../CreatorList/CreatorList';
-// import { pageContents /*listData*/ } from '../../data/dataStore';
+import Home from '../Home/HomeContainer';
+import Info from '../Info/Info';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import MainLayout from '../MainLayout/MainLayout';
+import Faq from '../Faq/Faq';
 
 class App extends React.Component {
-
-  state = {
-    lists: this.props.lists || [],
-  }
-
-  //Deklaracja typów props
-  static propTypes = {
-    title: PropTypes.node,
-    subtitle: PropTypes.node,
-    description: PropTypes.node,
-    lists: PropTypes.array,
-  }
-
   render() {
-    const {title, subtitle, lists} = this.props;
     return (
-      <Container>
-        <main className={styles.component}>
-          <h1 className={styles.title}>{title}</h1>
-          <h2 className={styles.subtitle}>{subtitle}</h2>
-          <Search />
-          {lists.map(listData => (
-            <List key={listData.id} {...listData} />
-          ))}
-        </main>
-      </Container>
+      <BrowserRouter>
+        <MainLayout>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/info" component={Info} />
+            <Route exact path="/faq" component={Faq} />
+          </Switch>
+        </MainLayout>
+      </BrowserRouter>
     );
   }
 }

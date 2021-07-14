@@ -12,11 +12,37 @@ export const settings = {
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
+  icon: {
+    name: 'spider',
+  },
+
 };
 
 export const pageContents = {
   title: 'My first React app',
   subtitle: 'A simple to-do app, with lists, columns and cards',
+};
+
+export const infoContents = {
+  title: 'Info Corner',
+  subtitle: 'All You need to know about this app',
+  text: 'Mauris quis enim pulvinar, cursus tortor semper, porttitor metus. Maecenas in bibendum ipsum. Donec ultricies, neque quis dignissim ullamcorper, libero nulla varius dui, ultricies tempus nulla ligula at tellus. In nisi ipsum, sodales nec odio in, ultricies venenatis arcu. Nunc tristique lobortis erat, eget imperdiet quam. Pellentesque vitae imperdiet sapien. Vestibulum at malesuada mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in porttitor leo. Duis lobortis ex urna, id porttitor orci condimentum sed. Cras odio erat, laoreet volutpat semper nec, molestie a justo. In sed vehicula tellus, vel pulvinar neque.Mauris quis enim pulvinar, cursus tortor semper, porttitor metus. Maecenas in bibendum ipsum. Donec ultricies, neque quis dignissim ullamcorper, libero nulla varius dui, ultricies tempus nulla ligula at tellus. In nisi ipsum, sodales nec odio in, ultricies venenatis arcu. Nunc tristique lobortis erat, eget imperdiet quam. Pellentesque vitae imperdiet sapien. Vestibulum at malesuada mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in porttitor leo. Duis lobortis ex urna, id porttitor orci condimentum sed. Cras odio erat, laoreet volutpat semper nec, molestie a justo. In sed vehicula tellus, vel pulvinar neque.Mauris quis enim pulvinar, cursus tortor semper, porttitor metus. Maecenas in bibendum ipsum. Donec ultricies, neque quis dignissim ullamcorper, libero nulla varius dui, ultricies tempus nulla ligula at tellus. In nisi ipsum, sodales nec odio in, ultricies venenatis arcu. Nunc tristique lobortis erat, eget imperdiet quam. Pellentesque vitae imperdiet sapien. Vestibulum at malesuada mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in porttitor leo. Duis lobortis ex urna, id porttitor orci condimentum sed. Cras odio erat, laoreet volutpat semper nec, molestie a justo. In sed vehicula tellus, vel pulvinar neque.Mauris quis enim pulvinar, cursus tortor semper, porttitor metus. Maecenas in bibendum ipsum. Donec ultricies, neque quis dignissim ullamcorper, libero nulla varius dui, ultricies tempus nulla ligula at tellus. In nisi ipsum, sodales nec odio in, ultricies venenatis arcu. Nunc tristique lobortis erat, eget imperdiet quam. Pellentesque vitae imperdiet sapien. Vestibulum at malesuada mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in porttitor leo. Duis lobortis ex urna, id porttitor orci condimentum sed. Cras odio erat, laoreet volutpat semper nec, molestie a justo. In sed vehicula tellus, vel pulvinar neque.',
+};
+
+export const infoData = {
+  title: 'Info',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+};
+
+export const faqContents = {
+  title: 'FAQ',
+  subtitle: 'Ask us antyhing',
+  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem dolor, dignissim sit amet viverra eu, pulvinar vel lectus.?',
+};
+
+export const faqData = {
+  title: 'FAQ',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
 };
 
 export const listData = {
@@ -142,7 +168,7 @@ const cards = [
 ];
 
 const initialStoreData = {
-  app: {...pageContents},
+  app: { ...pageContents },
   lists: [...lists],
   columns: [...columns],
   cards: [...cards],
