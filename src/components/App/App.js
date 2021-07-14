@@ -6,6 +6,7 @@ import MainLayout from '../MainLayout/MainLayout';
 import Faq from '../Faq/Faq';
 import { AnimatedSwitch } from 'react-router-transition';
 import styles from './App.scss';
+import List from '../List/ListContainer';
 
 class App extends React.Component {
   render() {
@@ -21,6 +22,7 @@ class App extends React.Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/info" component={Info} />
             <Route exact path="/faq" component={Faq} />
+            <Route exact path="/list/:id" component={List} />
           </AnimatedSwitch>
         </MainLayout>
       </BrowserRouter>
