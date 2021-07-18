@@ -9,7 +9,7 @@ import { withRouter } from 'react-router';
 class Search extends React.Component {
   static propTypes = {
     text: PropTypes.string,
-    history: PropTypes.node,
+    history: PropTypes.object,
   }
 
   static defaultProps = {
